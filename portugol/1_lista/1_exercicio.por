@@ -2,6 +2,7 @@
 	meses e dias e mostre-a expressa apenas em dias.*/ 
 programa {
 	funcao inicio() {
+		
 		inteiro anos
 		inteiro mes
 		inteiro dias
@@ -26,7 +27,7 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 263; 
+ * @POSICAO-CURSOR = 156; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
