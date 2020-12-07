@@ -1,26 +1,19 @@
-/*
- *1. Faça um sistema que leia a idade de uma pessoa expressa em anos, meses e dias
- * e mostre-a expressa apenas em dias. 
- */
 import java.util.Scanner;
 
 public class PS_1 {
 	public static void main(String args[]) {
 		Scanner scan = new Scanner(System.in);
+		int tempoAnos, ano, mes, dia;
 		
-		int anos, mes, dias, totalDias = 0;
-			
-		System.out.println("Digite sua idade(somente em anos): ");
-		anos = scan.nextInt();
-		System.out.println("Digite a sua idade(somente meses): ");
+		System.out.println("Digite o ano do seu nascimento: ");
+		ano = scan.nextInt();
+		System.out.println("Digite o mês do seu nascimento: ");
 		mes = scan.nextInt();
-		System.out.println("Digite sua idade(somente em dias): ");
-		dias = scan.nextInt();
+		System.out.println("Digite o dia do seu nascimento: ");
+		dia = scan.nextInt();
+	
+		tempoAnos = (ano*365)+(mes*30)+dia;
 		
-		totalDias = totalDias + (anos*365);
-		totalDias = totalDias + (mes*30);
-		totalDias = totalDias + dias;
-		
-		System.out.println("O total expresso em dias é: " + totalDias);
+		System.out.println("Você viveu " + tempoAnos + " dias.");
 	}
 }
