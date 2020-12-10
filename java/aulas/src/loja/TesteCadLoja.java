@@ -2,7 +2,7 @@ package loja;
 
 import java.util.Scanner;
 
-public class CadLoja {
+public class TesteCadLoja {
 
 	public static void main(String[] args) {
 
@@ -10,10 +10,13 @@ public class CadLoja {
 		
 		char generoCliente;
 		char opcaoMenu;
+		char op;
 		String nomeCliente;
+		int kc;
 		
+		do {
 		linha();
-		System.out.println("Dungeons & Gincanas");
+		System.out.println("\nDungeons & Gincanas");
 		System.out.println("[SLOGAN LEGAL]");
 		linha();
 		pula();
@@ -28,9 +31,9 @@ public class CadLoja {
 		switch(opcaoMenu) {
 			case '1':
 				linha();
-				System.out.println("Dungeons & Gincanas");
+				System.out.println("\nDungeons & Gincanas");
 				linha();
-				System.out.print("Nome do cliente: ");
+				System.out.print("\nNome do cliente: ");
 				nomeCliente = scan.next().toUpperCase();	//por o nome dele em maiusculo o 1 nome
 				System.out.print("Gênero do cliente [M] Masculino [F] Feminino [O] Outro: ");
 				generoCliente = scan.next().toUpperCase().charAt(0);
@@ -38,12 +41,30 @@ public class CadLoja {
 				if(voltaGenero(generoCliente) == "Masculino") {
 					pula();
 					System.out.printf("Seja bem vindo a loja %s!",nomeCliente);
+					System.out.print("\nDeseja continuar [S] ou [N]: ");
+					op = scan.next().toUpperCase().charAt(0);
+					while ( op != 'S' && op != 'N') {
+						System.out.print("\nDeseja continuar [S] ou [N]: ");
+						op = scan.next().toUpperCase().charAt(0);
+					}
 				} else if (voltaGenero(generoCliente) == "Feminino") {
 					pula();
 					System.out.printf("Seja bem vinda a loja %s!",nomeCliente);
+					System.out.print("\nDeseja continuar [S] ou [N]: ");
+					op = scan.next().toUpperCase().charAt(0);
+					while ( op != 'S' && op != 'N') {
+						System.out.print("Deseja continuar [S] ou [N]: ");
+						op = scan.next().toUpperCase().charAt(0);
+					}
 				} else if (voltaGenero(generoCliente) == "Outros") {
 					pula();
 					System.out.printf("Seja bem vindx a loja %s!",nomeCliente);
+					System.out.print("\nDeseja continuar [S] ou [N]: ");
+					op = scan.next().toUpperCase().charAt(0);
+					while ( op != 'S' && op != 'N') {
+						System.out.print("\nDeseja continuar [S] ou [N]: ");
+						op = scan.next().toUpperCase().charAt(0);
+					}
 				}
 				
 			break;
@@ -51,13 +72,19 @@ public class CadLoja {
 			case '2':
 				pula();
 				System.out.println("WIP");	//Work in progress
+				System.out.print("\nDeseja continuar [S] ou [N]: ");
+				op = scan.next().toUpperCase().charAt(0);
 			break;
 			
 			case '3':
 				pula();
 				System.out.println("Obrigado por visitar a nossa loja, adoramos sua visita!");
+				System.out.print("\nDeseja continuar [S] ou [N]: ");
+				op = scan.next().toUpperCase().charAt(0);
 			break;
-		}
+			
+			}
+		} while(opcaoMenu != '3');
 	}
 
 	public static String voltaGenero(char generoCliente) {
@@ -81,7 +108,12 @@ public class CadLoja {
 	}
 
 	public static void linha() {
-		System.out.print("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+		//System.out.print("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+		int	numeroLinhas = 80;
+		
+		for(int kc = 1; kc <= numeroLinhas; kc++) {
+			System.out.print("▬");
+		}
 	}
 
 }
