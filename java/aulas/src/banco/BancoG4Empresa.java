@@ -49,9 +49,9 @@ public class BancoG4Empresa {
 		int diaUsuario = 0;
 		int[] aniversario = new int[40];
 		// VARIAVEIS BEYMAR
-		char opcaoEmpresa;
+		char opcaoEmpresa;	//opcao do menu empresa
 		double emprestimo[] = new double[40];
-		double saldoEmprestimo = 1000;
+		double saldoEmprestimo = 1000;	//limite do meu emprestimo
 
 		Scanner leia = new Scanner(System.in);
 
@@ -97,10 +97,10 @@ public class BancoG4Empresa {
 			}
 
 			do {
-				System.out.print("----------------------------------------------------\n");
+				System.out.print("------------------------------------------\n");
 				System.out.print("█	     BANCO DIGITAL G&4		 █\n");
-				System.out.print("-----------------------------------------------------\n");
-				System.out.print("\n------------ MENU INICIAL --------------\n\n");
+				System.out.print("------------------------------------------\n");
+				System.out.print("\n-------------- MENU INICIAL --------------\n\n");
 				System.out.print("[1] - MOVIMENTAÇÃO\n");
 				System.out.print("[2] - SALDO\n");
 				System.out.print("[3] - SAIR\n");
@@ -236,7 +236,7 @@ public class BancoG4Empresa {
 										System.out.print("\nOpção: ");
 										opcao = leia.next().toUpperCase().charAt(0);
 									}
-								} else { /// BEYMAR - ESPECIAL
+								} else { /// BEYMAR - EMPRESA
 
 									if (movimento[contador] <= saldoConta[escolha]) {
 										saldoConta[escolha] = saldoConta[escolha] - movimento[contador];
@@ -257,22 +257,24 @@ public class BancoG4Empresa {
 										System.out.print("Deseja solicitar um empréstimo [S] ou [N]?");
 										System.out.print("\nOpção: ");
 										opcaoEmpresa = leia.next().toUpperCase().charAt(0);
+										contador++;	//contador para os movimentos diminuirem
 										
 										if(opcaoEmpresa == 'S') {
+											System.out.println("\nSaldo atual do empréstimo : " + saldoEmprestimo); //emprestimo atual
 											System.out.print("Digite o valor solicitado do empréstimo: ");
 											emprestimo[escolha] = leia.nextDouble();
 																									//valor max do emprestimo
 											if(emprestimo[escolha] <= saldoEmprestimo) { 	
 												saldoEmprestimo = saldoEmprestimo - emprestimo[escolha];
 												saldoConta[escolha] = saldoConta[escolha] + emprestimo[escolha];
-												System.out.println("\nSaldo do empréstimo : " + saldoEmprestimo);
+												System.out.println("\nSaldo do empréstimo : " + saldoEmprestimo);  //emprestimo atual
 												System.out.printf("\nSeu novo saldo é de R$ %.2f", saldoConta[escolha]);
 											} else {
 												System.out.print("\nPedido maior que seu limite!\n");
 											}
 											
 										} else if(opcaoEmpresa == 'N') {
-											System.out.println("Saldo do empréstimo : " + saldoEmprestimo);
+											System.out.println("Saldo do empréstimo : " + saldoEmprestimo);	//emprestimo atual
 											System.out.printf("Seu novo saldo é de R$ %.2f", saldoConta[escolha]);
 										} else {
 											while (opcao != 'S' && opcao != 'N') {
@@ -300,6 +302,8 @@ public class BancoG4Empresa {
 									movimento[contador] = leia.nextDouble();
 								}
 
+								
+								
 								if (tipoConta[escolha] == 3) {
 									if (saldoConta[escolha] < 0) {
 
@@ -330,7 +334,7 @@ public class BancoG4Empresa {
 							} else {
 								while (opcaoTipo != 'D' && opcaoTipo != 'C' && opcaoTipo != 'S') {
 									System.out
-											.printf("\nO que você deseja fazer: [D]-Débito , [C]-Crédito OU [S]-Sair");
+											.printf("\nO que você deseja fazer: [D] - Débito , [C] - Crédito OU [S] - Sair");
 									System.out.print("\nOpção: ");
 									opcaoTipo = leia.next().toUpperCase().charAt(0);
 								}
