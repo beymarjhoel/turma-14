@@ -1,5 +1,7 @@
+package atividades;
+
 import java.util.Scanner;
-	public class ProgramaIdade
+	public class idadeFuncao
 	{
 		public static void main(String[] args) // parte principal - programa mesmo
 		{

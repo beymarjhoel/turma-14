@@ -1,8 +1,8 @@
-package banco;
+package projetos.banco;
 
 import java.util.Scanner;
 
-public class Empresa {
+public class EmpresTeste {
 
 	public static void main() {
 		

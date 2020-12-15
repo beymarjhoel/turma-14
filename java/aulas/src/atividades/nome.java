@@ -1,5 +1,6 @@
+package atividades;
 
-public class Meunome {
+public class nome {
 	
 	public static void main(String[] args) {
 		

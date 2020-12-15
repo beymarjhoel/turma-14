@@ -1,6 +1,8 @@
+package atividades;
+
 import java.util.Scanner;
 
-public class TesteTernario {
+public class programaTernario {
 	public static void main(String[] args)
 	{
 		

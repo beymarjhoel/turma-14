@@ -1,5 +1,5 @@
 
-package loja;
+package projetos.loja;
 import java.util.Scanner;
 public class TrueCadLoja {
 	public static void main(String[] args)
@@ -7,7 +7,7 @@ public class TrueCadLoja {
 		//variveis
 		Scanner leia = new Scanner(System.in);
 		String codigos[] = new String[10];
-		String produtos[] = {"CAIXA PORTA JOIAS","GUIRLANDA DE NATAL AFRO","KIT PORTA COPOS","CAIXA PORTA TRECO","CAIXA PORTA ARGOLAS","PORTA-RELOGIOS","QUADRO AFRO","ESPELHO DE YANSÃ","KIT PORTA-COPOS LUXO","QUADRO SIMPLES"};
+		String produtos[] = {"CAIXA PORTA JOIAS","GUIRLANDA DE NATAL AFRO","KIT PORTA COPOS","CAIXA PORTA TRECO","CAIXA PORTA ARGOLAS","PORTA-RELOGIOS","QUADRO AFRO","ESPELHO DE YANSÃƒ","KIT PORTA-COPOS LUXO","QUADRO SIMPLES"};
 		double precoUnitarios[] = {65,65,50,20,30,80,120,35,80,40};
 		int estoque[] = new int[10];
 		int carrinho[];
@@ -25,7 +25,7 @@ public class TrueCadLoja {
 		System.out.println("[2] - GERENCIAR ESTOQUE");
 		System.out.println("[3] - SAIR");
 		System.out.println();
-		System.out.print("DIGITE A OPÇÃO: ");
+		System.out.print("DIGITE A OPÃ‡ÃƒO: ");
 		char opcaoMenu = leia.next().charAt(0);
 		switch (opcaoMenu)
 		{
@@ -33,7 +33,7 @@ public class TrueCadLoja {
 			{
 				System.out.print("Por favor informe o seu nome: ");
 				String nomeCliente = leia.next().toUpperCase();
-				System.out.print("Você de define como M-masculino, F-feminino ou O-outro :");
+				System.out.print("VocÃª de define como M-masculino, F-feminino ou O-outro :");
 				char generoCliente = leia.next().toUpperCase().charAt(0);
 				System.out.printf("Seja bem-vind%s loja %s!!!\n",voltaGenero(generoCliente),nomeCliente);
 				//
@@ -47,7 +47,7 @@ public class TrueCadLoja {
 					
 				}
 							
-				System.out.print("Insira o código do produto que deseja comprar: ");
+				System.out.print("Insira o cÃ³digo do produto que deseja comprar: ");
 				sacola = leia.next();
 				
 				for(int x = 0; x < 10; x++) {
@@ -82,7 +82,7 @@ public class TrueCadLoja {
 	
 	
 	public static void linhaDetalhe() {
-		System.out.println("═══════════════════════════════════════════════════════");
+		System.out.println("â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�");
 		
 	}
 	

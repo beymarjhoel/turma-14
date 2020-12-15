@@ -1,4 +1,4 @@
-package banco;
+package projetos.banco;
 
 import java.util.Random;
 

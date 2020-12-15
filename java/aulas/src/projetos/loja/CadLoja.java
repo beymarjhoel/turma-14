@@ -1,4 +1,4 @@
-package loja;
+package projetos.loja;
 
 import java.util.Scanner;
 

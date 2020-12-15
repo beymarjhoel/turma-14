@@ -1,29 +1,29 @@
-package loja;
+package projetos.loja;
 import java.util.Scanner;
 public class TesteCadLoja {
 	public static void main(String[] args) {
 		
-		// para - repetição tinha tamanho definido - for
+		// para - repetiÃ§Ã£o tinha tamanho definido - for
 		// enquanto - nao sabe onde para, e testar no inicio
-		// faça enquanto - nao sabe onde para, mais roda pelo menos 1 vez, testar no final
+		// faÃ§a enquanto - nao sabe onde para, mais roda pelo menos 1 vez, testar no final
 		
 		Scanner leia = new Scanner(System.in);
 		//enquanto - while
-		//System.out.println("Começa o programa S/N: ");
+		//System.out.println("ComeÃ§a o programa S/N: ");
 		char opcao;
 		
 		do
 		{
 			for (int x=1; x<=20; x++)
 			{
-				System.out.print("═");
+				System.out.print("â•�");
 			}
 			System.out.println();
 			System.out.println("SISTEMA DE CADASTRO");
 			System.out.println();
 			for (int x=1; x<=20; x++)
 			{
-				System.out.print("═");
+				System.out.print("â•�");
 			}
 			System.out.println();
 			System.out.println("Continuar S/N: ");
@@ -33,7 +33,7 @@ public class TesteCadLoja {
 			{
 				if (opcao != 'S' && opcao !='N')
 				{
-					System.out.println("Por favor digite S ou N tá bom. Tente de novo: ");
+					System.out.println("Por favor digite S ou N tÃ¡ bom. Tente de novo: ");
 					opcao = leia.next().toUpperCase().charAt(0);
 				} else
 				{

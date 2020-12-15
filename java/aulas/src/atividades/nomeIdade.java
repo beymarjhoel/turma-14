@@ -1,6 +1,8 @@
+package atividades;
+
 import java.util.Scanner;
 
-public class Oimundo {
+public class nomeIdade {
 	
 	public static void main(String[] args) {
 		

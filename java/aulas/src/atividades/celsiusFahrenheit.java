@@ -1,6 +1,8 @@
+package atividades;
+
 import java.util.Scanner;
 
-public class Celsius_to_Fahrenheit {
+public class celsiusFahrenheit {
 
 	public static void main(String args[]) {
 		

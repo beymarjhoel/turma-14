@@ -1,4 +1,4 @@
-package exemplos;
+package lista0;
 import java.util.Scanner;
 public class ExemploAulaLista
 {

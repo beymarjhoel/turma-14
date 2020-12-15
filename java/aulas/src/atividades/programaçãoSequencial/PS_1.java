@@ -1,3 +1,5 @@
+package atividades.programaçãoSequencial;
+
 import java.util.Scanner;
 
 public class PS_1 {

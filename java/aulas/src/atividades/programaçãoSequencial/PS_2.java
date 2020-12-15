@@ -1,6 +1,5 @@
-/*
- * 2. Faça um sistema que leia a idade de uma pessoa expressa em dias e mostre-a expressa em anos, meses e dias.
- */
+package atividades.programaçãoSequencial;
+
 import java.util.Scanner;
 
 public class PS_2 {
