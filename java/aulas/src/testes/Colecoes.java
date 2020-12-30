@@ -9,13 +9,14 @@ public class Colecoes {
 	public static void main(String args[]) {
 		
 		Collection<String> nomes = new ArrayList();
+		
 		nomes.add("Mario");
 		nomes.add("Maria");
 		nomes.add("Juliana");
-		nomes.add("Rafaela");
-	
-		for(String name : nomes) {
-			System.out.println("LISTA DE NOMES: " + name);
+		nomes.add("Carollyne");
+		
+		for (String name : nomes) {
+			System.out.println("Lista de nomes: " + name);
 		}
 		
 	}
