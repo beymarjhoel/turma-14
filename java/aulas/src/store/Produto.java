@@ -69,6 +69,8 @@ public class Produto {
 		//this.qtdeProdutoEstoque + this.qtdeProdutoEstoque + entrada;
 		this.qtdeProdutoEstoque += entrada;
 	}
+	
+	
 	//comçea com o tipo e var q vai devolver
 	public boolean testarEstoque(int valor) {
 		if (valor > this.qtdeProdutoEstoque) {
@@ -84,6 +86,9 @@ public class Produto {
 		}
 	}
 		//retorna tipo double var venda e RECEBE um tipo int var qtdVendida 
+	
+	
+	
 	private double venda(int qtdeVendida) {
 		
 		if(testarEstoque(qtdeVendida)) {
